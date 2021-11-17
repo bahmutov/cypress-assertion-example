@@ -1,1 +1,8 @@
-{}
+{
+  "fixturesFolder": false,
+  "pluginsFile": false,
+  "testFiles": "**/*.js",
+  "defaultCommandTimeout": 1000,
+  "viewportHeight": 200,
+  "viewportWidth": 200
+}
