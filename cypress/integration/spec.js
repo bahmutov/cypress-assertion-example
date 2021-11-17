@@ -1,4 +1,6 @@
-/// <reference types="cypress" />
+/// <reference path="../index.d.ts" />
+
+// @ts-check
 
 describe('list', () => {
   beforeEach(() => {
@@ -31,6 +33,10 @@ describe('list', () => {
       cy.contains('li', 'first').should(($li) => {
         expect($li).to.have.attr('data-test-id')
         expect($li).to.have.css('font-weight', '700')
+        // use our custom assertion
+        expect($li).to.have.testId('first')
+        // try negative assertion
+        expect($li).to.not.have.testId('second')
       })
     })
 
