@@ -1,14 +1,25 @@
-// ***********************************************************
-// This example support/index.js is processed and
-// loaded automatically before your test files.
-//
-// This is a great place to put global configuration and
-// behavior that modifies Cypress.
-//
-// You can change the location of this file or turn off
-// automatically serving support files with the
-// 'supportFile' configuration option.
-//
-// You can read more here:
-// https://on.cypress.io/configuration
-// ***********************************************************
+/// <reference types="cypress" />
+
+chai.use((_chai) => {
+  // use "function" syntax to make sure when Chai
+  // calls it, the "this" object points at Chai
+
+  function testId(expectedValue) {
+    const attr = 'data-test-id'
+    if (expectedValue) {
+      const value = this._obj.attr(attr)
+      this.assert(
+        value === expectedValue,
+        `expected to find data-test-id="${expectedValue}", found value "${value}"`,
+      )
+    } else {
+      // only confirm the "data-test-id" attribute is present
+
+      this.assert(
+        this._obj.attr(attr) !== undefined,
+        `expected to find data-test-id attribute`,
+      )
+    }
+  }
+  _chai.Assertion.addMethod('testId', testId)
+})
