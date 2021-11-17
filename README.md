@@ -2,6 +2,8 @@
 [![ci](https://github.com/bahmutov/cypress-assertion-example/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/bahmutov/cypress-assertion-example/actions/workflows/ci.yml) ![cypress version](https://img.shields.io/badge/cypress-9.0.0-brightgreen)
 > Example of adding a custom assertion to Cypress tests
 
+Read the blog post [Create Custom Assertions For Test Readability](https://glebbahmutov.com/blog/custom-assertions/)
+
 See [spec.js](./cypress/integration/spec.js)
 
 ## Small print
