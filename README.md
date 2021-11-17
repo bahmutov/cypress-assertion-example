@@ -1,5 +1,5 @@
 # cypress-assertion-example
-![cypress version](https://img.shields.io/badge/cypress-9.0.0-brightgreen)
+[![ci](https://github.com/bahmutov/cypress-assertion-example/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/bahmutov/cypress-assertion-example/actions/workflows/ci.yml) ![cypress version](https://img.shields.io/badge/cypress-9.0.0-brightgreen)
 > Example of adding a custom assertion to Cypress tests
 
 ## Small print
